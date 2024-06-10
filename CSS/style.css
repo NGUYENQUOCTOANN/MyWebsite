@@ -175,3 +175,53 @@ footer {
 #contact form button:hover {
     background-color: #0056b3; /* Màu nền xanh dương nhạt khi di chuột */
 }
+/* Định nghĩa animation cho hiệu ứng chuyển động gradient */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Áp dụng hiệu ứng chuyển động gradient cho tiêu đề */
+h1, h2, h3, h4, h5, h6 {
+    background: linear-gradient(-45deg, #ff6b6b, #f7d794, #1dd1a1, #54a0ff);
+    background-size: 400% 400%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: gradient 15s ease infinite;
+    font-weight: bold;
+}
+
+/* Tùy chỉnh các thẻ h2 và p cho phần section-header */
+.section-header h2 {
+    font-size: 2.5rem; /* Cỡ chữ lớn */
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    font-size: 1.2rem; /* Cỡ chữ nhỏ */
+    color: #666; /* Màu chữ xám nhạt */
+}
+
+/* Áp dụng hiệu ứng chuyển động gradient cho các liên kết trong menu */
+nav ul li a {
+    background: linear-gradient(-45deg, #ff6b6b, #f7d794, #1dd1a1, #54a0ff);
+    background-size: 400% 400%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: gradient 15s ease infinite;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #ff6600; /* Đổi màu khi di chuột qua liên kết */
+}

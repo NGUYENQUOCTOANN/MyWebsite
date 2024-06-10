@@ -1,4 +1,9 @@
-
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 /* Font Family */
 body {
@@ -164,7 +169,7 @@ footer {
 }
 
 #contact form button {
-    background-color: #494e54; /* Màu nền  nhạt  */
+    background-color: #007bff; /* Màu nền xanh dương */
     color: #fff; /* Màu chữ trắng */
     padding: 10px 20px;
     border: none;

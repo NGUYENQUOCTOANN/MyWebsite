@@ -149,7 +149,7 @@
 }
 .product-item img {
     width: 100px; /* Adjust the width as needed */
-    height: 100px; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
     margin-bottom: 10px;
     object-fit: cover; /* Ensures the image covers the box while maintaining aspect ratio */
 }
@@ -173,3 +173,4 @@
         max-width: 100%;
     }
 }
+

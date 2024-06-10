@@ -1,176 +1,271 @@
-/* Basic styles for the cart */
-#cart {
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 300px;
-    height: 100%;
-    background-color: white;
-    border-left: 1px solid #ccc;
-    box-shadow: -3px 0 5px rgba(0,0,0,0.2);
-    padding: 20px;
-    display: none;
-    flex-direction: column;
-}
-#cart h2 {
-    text-align: center;
-}
-#cart-items {
-    flex: 1;
-    overflow-y: auto;
-}
-#cart-items .cart-item {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
-#cart-items .cart-item img {
-    max-width: 50px;
-    margin-right: 10px;
-}
-#cart-total {
-    text-align: center;
-    margin-top: 20px;
-}
-.add-to-cart {
-    cursor: pointer;
-    padding: 10px 15px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-}
-.add-to-cart:hover {
-    background-color: #218838;
-}
 
-/* Styles for the product images */
-.product-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-around;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #dddddd; /* Màu nền xám nhạt */
+    color: #333; /* Màu chữ đen */
 }
-.product-item {
-    flex: 1 1 calc(25% - 40px);
-    max-width: calc(25% - 40px);
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border: 1px solid #ccc;
-    padding: 20px;
-    box-sizing: border-box;
-}
-.product-item img {
-    width: 100px; /* Adjust the width as needed */
+.logo img {
+    width: 100px; /* Điều chỉnh kích thước của logo */
     height: auto;
-    margin-bottom: 10px;
 }
 
-/* Ensure responsiveness */
-@media (max-width: 1200px) {
-    .product-item {
-        flex: 1 1 calc(33.333% - 40px);
-        max-width: calc(33.333% - 40px);
-    }
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
 }
-@media (max-width: 768px) {
-    .product-item {
-        flex: 1 1 calc(50% - 40px);
-        max-width: calc(50% - 40px);
-    }
+
+header {
+    background-color: #333; /* Màu nền đen cho thanh menu */
+    color: #fff; /* Màu chữ trắng */
+    padding: 20px 0;
 }
-@media (max-width: 480px) {
-    .product-item {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
-/* Basic styles for the cart */
-#cart {
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 300px;
-    height: 100%;
-    background-color: white;
-    border-left: 1px solid #ccc;
-    box-shadow: -3px 0 5px rgba(0,0,0,0.2);
-    padding: 20px;
-    display: none;
-    flex-direction: column;
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
 }
-#cart h2 {
-    text-align: center;
+
+nav ul li a {
+    color: #fff; /* Màu chữ trắng cho các liên kết */
+    text-decoration: none;
 }
-#cart-items {
-    flex: 1;
-    overflow-y: auto;
+
+nav ul li a:hover {
+    text-decoration: underline; /* Gạch chân khi di chuột qua liên kết */
 }
-#cart-items .cart-item {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
+header {
+    background-color: #007bff; /* Màu xanh dương */
+    color: #fff; /* Màu chữ trắng */
+    padding: 20px 0;
 }
-#cart-items .cart-item img {
-    max-width: 50px;
-    margin-right: 10px;
+#contact {
+    padding: 50px 0;
 }
-#cart-total {
-    text-align: center;
+
+#contact form {
     margin-top: 20px;
 }
-.add-to-cart {
-    cursor: pointer;
-    padding: 10px 15px;
-    background-color: #28a745;
-    color: white;
-    border: none;
+
+#contact form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#contact form input[type="text"],
+#contact form input[type="email"],
+#contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
 }
-.add-to-cart:hover {
-    background-color: #218838;
+
+#contact form button {
+    background-color: #007bff; /* Màu nền xanh dương */
+    color: #fff; /* Màu chữ trắng */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-/* Styles for the product images */
-.product-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-around;
+#contact form button:hover {
+    background-color: #0056b3; /* Màu nền xanh dương nhạt khi di chuột */
 }
-.product-item {
-    flex: 1 1 calc(25% - 40px);
-    max-width: calc(25% - 40px);
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border: 1px solid #ccc;
-    padding: 20px;
+./* General Image Styling */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Specific styling for images in various sections if needed */
+#banner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.category-item img,
+.product-item img,
+.blog-item img {
+    max-width: 200px; /* Adjust as necessary */
+    max-height: 200px; /* Adjust as necessary */
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* Ensuring consistent box sizing */
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
-.product-item img {
-    width: 100px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 10px;
-    object-fit: cover; /* Ensures the image covers the box while maintaining aspect ratio */
+/* General Image Styling */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
-/* Ensure responsiveness */
-@media (max-width: 1200px) {
-    .product-item {
-        flex: 1 1 calc(33.333% - 40px);
-        max-width: calc(33.333% - 40px);
-    }
+/* Specific styling for the banner image */
+.banner-img {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Set a maximum height for the banner image */
+    object-fit: cover; /* Ensures the image covers the space */
 }
-@media (max-width: 768px) {
-    .product-item {
-        flex: 1 1 calc(50% - 40px);
-        max-width: calc(50% - 40px);
-    }
+
+/* Specific styling for images in various sections if needed */
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
 }
-@media (max-width: 480px) {
-    .product-item {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
+
+.image-item {
+    flex: 1 1 calc(33.333% - 32px); /* 3 images per row with 16px gap */
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    max-width: calc(33.333% - 32px); /* Ensure each item doesn't exceed a third of the container width */
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Set the same max-height for all images */
+    object-fit: cover; /* Ensures the images cover the space */
+}
+
+/* Ensuring consistent box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Container styling for better centering and padding */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+/* General Image Styling */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Specific styling for the banner image */
+.banner-img {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Set a maximum height for the banner image */
+    object-fit: cover; /* Ensures the image covers the space */
+}
+
+/* Specific styling for images in various sections if needed */
+.responsive-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the images cover the space */
+}
+
+/* Blog Image Styling */
+.blog-img {
+    max-height: 500px; /* Increase the max-height for blog images */
+}
+
+/* Blog list and items */
+.blog-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+.blog-item {
+    flex: 1 1 calc(50% - 32px); /* 2 images per row with 16px gap */
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    max-width: calc(50% - 32px); /* Ensure each item doesn't exceed half of the container width */
+}
+
+.blog-item img {
+    width: 100%;
+    height: auto;
+    max-height: 500px; /* Set the same max-height for blog images */
+    object-fit: cover; /* Ensures the images cover the space */
+}
+
+/* Ensuring consistent box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Container styling for better centering and padding */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cân đối kích thước của hình ảnh */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Các phần tử chứa hình ảnh */
+.container {
+    width: 90%; /* hoặc bất kỳ giá trị nào phù hợp với thiết kế của bạn */
+    margin: 0 auto;
+}
+
+#about-us, #mission-vision, #team, #partners {
+    padding: 50px 0; /* hoặc bất kỳ giá trị nào phù hợp */
+}
+
+.team-list, .partner-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.team-member, .partner-item {
+    flex: 0 0 calc(33.33% - 20px); /* hoặc bất kỳ giá trị nào phù hợp */
+    margin: 10px;
+    text-align: center;
+}
+
+.team-member img, .partner-item img {
+    width: 100%;
+    max-width: 100%;
 }
 

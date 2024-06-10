@@ -1,186 +1,86 @@
-/* Reset CSS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Nền trang */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0; /* Màu nền xám nhạt */
-    color: #333; /* Màu chữ đen */
-}
-
-/* Container */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 16px;
-}
-
-/* Header */
-header {
-    background-color: #333; /* Màu nền đen cho thanh menu */
-    color: #fff; /* Màu chữ trắng */
-    padding: 20px 0;
-    text-align: center;
-    position: relative;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2em;
-    background: linear-gradient(45deg, #ff6ec4, #7873f5);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    color: #fff; /* Màu chữ trắng cho các liên kết */
-    text-decoration: none;
-    padding: 10px 15px;
-    background: linear-gradient(45deg, #ff6ec4, #7873f5);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Sections */
-section {
-    padding: 50px 0;
-}
-
-section h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    background: linear-gradient(45deg, #ff6ec4, #7873f5);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-/* About Us Section */
-#about-us {
-    background-color: #fff; /* Màu nền trắng */
-    border-radius: 8px;
-    padding: 50px 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Mission and Vision Section */
-#mission-vision .mission-vision-content {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-#mission-vision .mission, #mission-vision .vision {
-    width: 45%;
-    background-color: #fff; /* Màu nền trắng */
-    border-radius: 8px;
+/* Basic styles for the cart */
+#cart {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    border-left: 1px solid #ccc;
+    box-shadow: -3px 0 5px rgba(0,0,0,0.2);
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 10px 0;
+    display: none;
+    flex-direction: column;
 }
-
-#mission-vision .mission h3, #mission-vision .vision h3 {
-    background: linear-gradient(45deg, #ff6ec4, #7873f5);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-/* Team Section */
-#team .team-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-#team .team-member {
-    flex: 1 1 calc(33.33% - 40px); /* Điều chỉnh để có 3 thành viên mỗi hàng */
-    max-width: calc(33.33% - 40px);
+#cart h2 {
     text-align: center;
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-#team .team-member img {
-    max-width: 100%;
-    border-radius: 50%;
+#cart-items {
+    flex: 1;
+    overflow-y: auto;
+}
+#cart-items .cart-item {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 10px;
 }
-
-/* Partners Section */
-#partners .partner-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+#cart-items .cart-item img {
+    max-width: 50px;
+    margin-right: 10px;
 }
-
-#partners .partner-item {
-    flex: 1 1 calc(33.33% - 40px); /* Điều chỉnh để có 3 đối tác mỗi hàng */
-    max-width: calc(33.33% - 40px);
+#cart-total {
     text-align: center;
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+.add-to-cart {
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.add-to-cart:hover {
+    background-color: #218838;
 }
 
-#partners .partner-item img {
-    max-width: 100%;
-    border-radius: 8px;
-}
-
-/* Products Section */
-#products .product-list {
+/* Styles for the product images */
+.product-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 20px;
+    justify-content: space-around;
 }
-
-#products .product-item {
-    flex: 1 1 calc(25% - 40px); /* Điều chỉnh để có 4 sản phẩm mỗi hàng */
+.product-item {
+    flex: 1 1 calc(25% - 40px);
     max-width: calc(25% - 40px);
     text-align: center;
-    background-color: #fff;
-    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 1px solid #ccc;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+.product-item img {
+    width: 150px; /* Adjust the width as needed */
+    height: auto;
 }
 
-#products .product-item img {
-    max-width: 100%;
-    border-radius: 8px;
+/* Ensure responsiveness */
+@media (max-width: 1200px) {
+    .product-item {
+        flex: 1 1 calc(33.333% - 40px);
+        max-width: calc(33.333% - 40px);
+    }
 }
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 50px;
+@media (max-width: 768px) {
+    .product-item {
+        flex: 1 1 calc(50% - 40px);
+        max-width: calc(50% - 40px);
+    }
+}
+@media (max-width: 480px) {
+    .product-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
 }

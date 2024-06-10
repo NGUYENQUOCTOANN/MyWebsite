@@ -1,3 +1,16 @@
+/* Định nghĩa animation cho hiệu ứng chuyển động gradient */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 /* Reset CSS */
 * {
     margin: 0;
@@ -5,178 +18,167 @@
     box-sizing: border-box;
 }
 
-/* Font Family */
+/* Nền trang */
 body {
     font-family: Arial, sans-serif;
-}
-
-/* Background và Color chung */
-body {
-    background-color: #f9f9f9; /* Màu nền xám nhạt */
+    background-color: #f0f0f0; /* Màu nền xám nhạt */
     color: #333; /* Màu chữ đen */
 }
 
-/* Container chính */
+/* Container */
 .container {
-    width: 80%; /* Điều chỉnh kích thước container */
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0 16px;
 }
 
 /* Header */
 header {
-    background-color: #444; /* Màu nền xám đậm */
+    background-color: #333; /* Màu nền đen cho thanh menu */
     color: #fff; /* Màu chữ trắng */
     padding: 20px 0;
-    text-align: center; /* Căn giữa nội dung */
-    border-bottom: 2px solid #333; /* Đường viền dưới */
+    text-align: center;
+    position: relative;
 }
 
-/* Logo */
-.logo img {
-    width: 100px; /* Điều chỉnh kích thước của logo */
-    height: auto;
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    background: linear-gradient(45deg, #ff6ec4, #7873f5);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 10s ease infinite;
 }
 
-/* Navigation */
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    text-align: center; /* Căn giữa các liên kết */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 15px; /* Khoảng cách giữa các liên kết */
 }
 
 nav ul li a {
     color: #fff; /* Màu chữ trắng cho các liên kết */
     text-decoration: none;
-    font-weight: bold; /* Đậm chữ */
+    padding: 10px 15px;
+    background: linear-gradient(45deg, #ff6ec4, #7873f5);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 10s ease infinite;
 }
 
 nav ul li a:hover {
-    color: #ff6600; /* Đổi màu khi di chuột qua liên kết */
+    text-decoration: underline;
 }
 
-/* Section Header */
-.section-header {
-    text-align: center; /* Căn giữa nội dung */
-    margin-bottom: 40px; /* Khoảng cách dưới */
-}
-
-.section-header h2 {
-    font-size: 2.5rem; /* Cỡ chữ lớn */
-    color: #444; /* Màu chữ xám đậm */
-}
-
-.section-header p {
-    font-size: 1rem; /* Cỡ chữ nhỏ */
-    color: #666; /* Màu chữ xám nhạt */
-}
-
-/* Main Content Sections */
+/* Sections */
 section {
-    padding: 40px 0;
+    padding: 50px 0;
 }
 
-#about-us, #mission-vision, #team, #partners {
-    background-color: #fff; /* Màu nền trắng */
-    border: 1px solid #ddd; /* Đường viền nhạt */
-    margin-bottom: 40px; /* Khoảng cách dưới */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng nhẹ */
-}
-
-#about-us p, #mission-vision p, #team p, #partners p {
+section h2 {
+    text-align: center;
     margin-bottom: 20px;
+    background: linear-gradient(45deg, #ff6ec4, #7873f5);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 10s ease infinite;
 }
 
-/* Team and Partners */
-.team-list, .partner-list {
+/* About Us Section */
+#about-us {
+    background-color: #fff; /* Màu nền trắng */
+    border-radius: 8px;
+    padding: 50px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Mission and Vision Section */
+#mission-vision .mission-vision-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#mission-vision .mission, #mission-vision .vision {
+    width: 45%;
+    background-color: #fff; /* Màu nền trắng */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+}
+
+#mission-vision .mission h3, #mission-vision .vision h3 {
+    background: linear-gradient(45deg, #ff6ec4, #7873f5);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 10s ease infinite;
+}
+
+/* Team Section */
+#team .team-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Khoảng cách giữa các phần tử */
+    gap: 20px;
 }
 
-.team-member, .partner-item {
-    flex: 1 1 calc(33.33% - 40px); /* Đảm bảo 3 phần tử mỗi hàng với khoảng cách 20px */
-    margin: 10px;
+#team .team-member {
+    flex: 1 1 calc(33.33% - 40px); /* Điều chỉnh để có 3 thành viên mỗi hàng */
+    max-width: calc(33.33% - 40px);
     text-align: center;
-    background-color: #fafafa; /* Màu nền nhạt cho các phần tử */
-    border: 1px solid #eee; /* Đường viền nhạt */
-    padding: 20px; /* Khoảng cách trong */
-    border-radius: 8px; /* Bo góc */
-    transition: transform 0.3s; /* Hiệu ứng chuyển động */
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.team-member img, .partner-item img {
-    width: 100%;
-    height: auto;
-    max-height: 200px; /* Đặt chiều cao tối đa cho hình ảnh */
-    object-fit: cover; /* Đảm bảo hình ảnh bao phủ không gian */
+#team .team-member img {
+    max-width: 100%;
+    border-radius: 50%;
     margin-bottom: 10px;
 }
 
-.team-member h3, .partner-item h3 {
-    font-size: 1.2rem; /* Cỡ chữ */
-    color: #333; /* Màu chữ đen */
-    margin-bottom: 10px;
+/* Partners Section */
+#partners .partner-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
-.team-member p, .partner-item p {
-    font-size: 1rem; /* Cỡ chữ */
-    color: #666; /* Màu chữ xám nhạt */
+#partners .partner-item {
+    flex: 1 1 calc(33.33% - 40px); /* Điều chỉnh để có 3 đối tác mỗi hàng */
+    max-width: calc(33.33% - 40px);
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.team-member:hover, .partner-item:hover {
-    transform: translateY(-10px); /* Hiệu ứng khi di chuột qua */
+#partners .partner-item img {
+    max-width: 100%;
+    border-radius: 8px;
 }
 
 /* Footer */
 footer {
-    background-color: #444; /* Màu nền xám đậm */
-    color: #fff; /* Màu chữ trắng */
-    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
     text-align: center;
-    border-top: 2px solid #333; /* Đường viền trên */
-}
-
-/* Form */
-#contact {
-    padding: 50px 0;
-}
-
-#contact form {
-    margin-top: 20px;
-}
-
-#contact form label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-#contact form input[type="text"],
-#contact form input[type="email"],
-#contact form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-#contact form button {
-    background-color: #007bff; /* Màu nền xanh dương */
-    color: #fff; /* Màu chữ trắng */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#contact form button:hover {
-    background-color: #0056b3; /* Màu nền xanh dương nhạt khi di chuột */
+    padding: 20px 0;
+    margin-top: 50px;
 }

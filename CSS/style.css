@@ -1,33 +1,26 @@
-/* Reset CSS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-/* Font Family */
+/* Body */
 body {
     font-family: Arial, sans-serif;
-}
-
-/* Background và Color chung */
-body {
-    background-color: #dddddd; /* Màu nền xám nhạt */
+    background-color: #f9f9f9; /* Màu nền xám nhạt */
     color: #333; /* Màu chữ đen */
+    line-height: 1.6;
 }
 
-/* Container chính */
+/* Container */
 .container {
-    width: 80%; /* hoặc bất kỳ giá trị nào phù hợp */
-    margin: auto;
-    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 /* Header */
 header {
-    background-color: #333; /* Màu nền đen cho thanh menu */
+    background-color: #444; /* Màu nền xám đậm */
     color: #fff; /* Màu chữ trắng */
     padding: 20px 0;
+    text-align: center; /* Căn giữa nội dung */
+    border-bottom: 2px solid #333; /* Đường viền dưới */
 }
 
 /* Logo */
@@ -41,76 +34,138 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    text-align: center; /* Căn giữa các liên kết */
 }
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin: 0 15px; /* Khoảng cách giữa các liên kết */
 }
 
 nav ul li a {
     color: #fff; /* Màu chữ trắng cho các liên kết */
     text-decoration: none;
+    font-weight: bold; /* Đậm chữ */
 }
 
 nav ul li a:hover {
-    text-decoration: underline; /* Gạch chân khi di chuột qua liên kết */
+    color: #ff6600; /* Đổi màu khi di chuột qua liên kết */
 }
 
-/* Hiệu ứng hình ảnh */
-img {
-    max-width: 100%;
-    height: auto;
+/* Section Header */
+.section-header {
+    text-align: center; /* Căn giữa nội dung */
+    margin-bottom: 40px; /* Khoảng cách dưới */
 }
 
-/* General Image Styling */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+.section-header h2 {
+    font-size: 2.5rem; /* Cỡ chữ lớn */
+    color: #444; /* Màu chữ xám đậm */
 }
 
-/* Container styling for better centering and padding */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 16px;
+.section-header p {
+    font-size: 1rem; /* Cỡ chữ nhỏ */
+    color: #666; /* Màu chữ xám nhạt */
 }
 
-/* Các phần tử chứa hình ảnh */
-#about-us,
-#mission-vision,
-#team,
-#partners {
-    padding: 50px 0; /* hoặc bất kỳ giá trị nào phù hợp */
+/* Main Content Sections */
+section {
+    padding: 40px 0;
 }
 
-.team-list,
-.partner-list {
+#about-us, #mission-vision, #team, #partners {
+    background-color: #fff; /* Màu nền trắng */
+    border: 1px solid #ddd; /* Đường viền nhạt */
+    margin-bottom: 40px; /* Khoảng cách dưới */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng nhẹ */
+}
+
+#about-us p, #mission-vision p, #team p, #partners p {
+    margin-bottom: 20px;
+}
+
+/* Team and Partners */
+.team-list, .partner-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 20px; /* Khoảng cách giữa các phần tử */
 }
 
-.team-member,
-.partner-item {
-    flex: 0 0 calc(33.33% - 20px); /* hoặc bất kỳ giá trị nào phù hợp */
+.team-member, .partner-item {
+    flex: 1 1 calc(33.33% - 40px); /* Đảm bảo 3 phần tử mỗi hàng với khoảng cách 20px */
     margin: 10px;
     text-align: center;
+    background-color: #fafafa; /* Màu nền nhạt cho các phần tử */
+    border: 1px solid #eee; /* Đường viền nhạt */
+    padding: 20px; /* Khoảng cách trong */
+    border-radius: 8px; /* Bo góc */
+    transition: transform 0.3s; /* Hiệu ứng chuyển động */
 }
 
-.team-member img,
-.partner-item img {
+.team-member img, .partner-item img {
     width: 100%;
-    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.team-member h3, .partner-item h3 {
+    font-size: 1.2rem; /* Cỡ chữ */
+    color: #333; /* Màu chữ đen */
+    margin-bottom: 10px;
+}
+
+.team-member p, .partner-item p {
+    font-size: 1rem; /* Cỡ chữ */
+    color: #666; /* Màu chữ xám nhạt */
+}
+
+.team-member:hover, .partner-item:hover {
+    transform: translateY(-10px); /* Hiệu ứng khi di chuột qua */
 }
 
 /* Footer */
 footer {
-    background-color: #333; /* Màu nền đen cho footer */
+    background-color: #444; /* Màu nền xám đậm */
     color: #fff; /* Màu chữ trắng */
     padding: 20px 0;
     text-align: center;
+    border-top: 2px solid #333; /* Đường viền trên */
+}
+
+/* Form */
+#contact {
+    padding: 50px 0;
+}
+
+#contact form {
+    margin-top: 20px;
+}
+
+#contact form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#contact form input[type="text"],
+#contact form input[type="email"],
+#contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact form button {
+    background-color: #007bff; /* Màu nền xanh dương */
+    color: #fff; /* Màu chữ trắng */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact form button:hover {
+    background-color: #0056b3; /* Màu nền xanh dương nhạt khi di chuột */
 }

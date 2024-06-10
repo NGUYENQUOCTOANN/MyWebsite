@@ -1,15 +1,19 @@
 
-/* Body */
+
+/* Font Family */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9; /* Màu nền xám nhạt */
-    color: #333; /* Màu chữ đen */
-    line-height: 1.6;
 }
 
-/* Container */
+/* Background và Color chung */
+body {
+    background-color: #f9f9f9; /* Màu nền xám nhạt */
+    color: #333; /* Màu chữ đen */
+}
+
+/* Container chính */
 .container {
-    width: 80%;
+    width: 80%; /* Điều chỉnh kích thước container */
     margin: 0 auto;
     padding: 20px;
 }
@@ -106,6 +110,8 @@ section {
 .team-member img, .partner-item img {
     width: 100%;
     height: auto;
+    max-height: 200px; /* Đặt chiều cao tối đa cho hình ảnh */
+    object-fit: cover; /* Đảm bảo hình ảnh bao phủ không gian */
     margin-bottom: 10px;
 }
 

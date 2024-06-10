@@ -1,16 +1,3 @@
-/* Định nghĩa animation cho hiệu ứng chuyển động gradient */
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
 /* Reset CSS */
 * {
     margin: 0;
@@ -46,10 +33,8 @@ header h1 {
     margin: 0;
     font-size: 2em;
     background: linear-gradient(45deg, #ff6ec4, #7873f5);
-    background-size: 400% 400%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: gradient 10s ease infinite;
 }
 
 nav ul {
@@ -70,10 +55,8 @@ nav ul li a {
     text-decoration: none;
     padding: 10px 15px;
     background: linear-gradient(45deg, #ff6ec4, #7873f5);
-    background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: gradient 10s ease infinite;
 }
 
 nav ul li a:hover {
@@ -89,10 +72,8 @@ section h2 {
     text-align: center;
     margin-bottom: 20px;
     background: linear-gradient(45deg, #ff6ec4, #7873f5);
-    background-size: 400% 400%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: gradient 10s ease infinite;
 }
 
 /* About Us Section */
@@ -121,10 +102,8 @@ section h2 {
 
 #mission-vision .mission h3, #mission-vision .vision h3 {
     background: linear-gradient(45deg, #ff6ec4, #7873f5);
-    background-size: 400% 400%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: gradient 10s ease infinite;
 }
 
 /* Team Section */

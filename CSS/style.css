@@ -229,12 +229,6 @@ img {
     margin: 0 auto;
     padding: 0 16px;
 }
-/* Reset CSS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 /* Cân đối kích thước của hình ảnh */
 img {

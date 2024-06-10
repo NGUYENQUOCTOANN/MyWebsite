@@ -153,6 +153,29 @@ section h2 {
     border-radius: 8px;
 }
 
+/* Products Section */
+#products .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+#products .product-item {
+    flex: 1 1 calc(25% - 40px); /* Điều chỉnh để có 4 sản phẩm mỗi hàng */
+    max-width: calc(25% - 40px);
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#products .product-item img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
 /* Footer */
 footer {
     background-color: #333;

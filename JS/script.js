@@ -61,7 +61,7 @@ function removeFromCart(productName) {
 
 function purchase() {
     if (cart.length > 0) {
-        alert('Cảm ơn bạn đã mua hàng!');
+        alert('CẢM ƠN BẠN ĐÃ MUA HÀNG BÊN SPORTSHOP!');
         cart.length = 0; // Clear the cart
         updateCart();
         closeCart();

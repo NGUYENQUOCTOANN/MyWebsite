@@ -1,52 +1,145 @@
 
+
+/* Font Family */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #dddddd; /* Màu nền xám nhạt */
+}
+
+/* Background và Color chung */
+body {
+    background-color: #f9f9f9; /* Màu nền xám nhạt */
     color: #333; /* Màu chữ đen */
 }
+
+/* Container chính */
+.container {
+    width: 80%; /* Điều chỉnh kích thước container */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #444; /* Màu nền xám đậm */
+    color: #fff; /* Màu chữ trắng */
+    padding: 20px 0;
+    text-align: center; /* Căn giữa nội dung */
+    border-bottom: 2px solid #333; /* Đường viền dưới */
+}
+
+/* Logo */
 .logo img {
     width: 100px; /* Điều chỉnh kích thước của logo */
     height: auto;
 }
 
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-}
-
-header {
-    background-color: #333; /* Màu nền đen cho thanh menu */
-    color: #fff; /* Màu chữ trắng */
-    padding: 20px 0;
-}
-
+/* Navigation */
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    text-align: center; /* Căn giữa các liên kết */
 }
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin: 0 15px; /* Khoảng cách giữa các liên kết */
 }
 
 nav ul li a {
     color: #fff; /* Màu chữ trắng cho các liên kết */
     text-decoration: none;
+    font-weight: bold; /* Đậm chữ */
 }
 
 nav ul li a:hover {
-    text-decoration: underline; /* Gạch chân khi di chuột qua liên kết */
+    color: #ff6600; /* Đổi màu khi di chuột qua liên kết */
 }
-header {
-    background-color: #007bff; /* Màu xanh dương */
+
+/* Section Header */
+.section-header {
+    text-align: center; /* Căn giữa nội dung */
+    margin-bottom: 40px; /* Khoảng cách dưới */
+}
+
+.section-header h2 {
+    font-size: 2.5rem; /* Cỡ chữ lớn */
+    color: #444; /* Màu chữ xám đậm */
+}
+
+.section-header p {
+    font-size: 1rem; /* Cỡ chữ nhỏ */
+    color: #666; /* Màu chữ xám nhạt */
+}
+
+/* Main Content Sections */
+section {
+    padding: 40px 0;
+}
+
+#about-us, #mission-vision, #team, #partners {
+    background-color: #fff; /* Màu nền trắng */
+    border: 1px solid #ddd; /* Đường viền nhạt */
+    margin-bottom: 40px; /* Khoảng cách dưới */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng nhẹ */
+}
+
+#about-us p, #mission-vision p, #team p, #partners p {
+    margin-bottom: 20px;
+}
+
+/* Team and Partners */
+.team-list, .partner-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Khoảng cách giữa các phần tử */
+}
+
+.team-member, .partner-item {
+    flex: 1 1 calc(33.33% - 40px); /* Đảm bảo 3 phần tử mỗi hàng với khoảng cách 20px */
+    margin: 10px;
+    text-align: center;
+    background-color: #fafafa; /* Màu nền nhạt cho các phần tử */
+    border: 1px solid #eee; /* Đường viền nhạt */
+    padding: 20px; /* Khoảng cách trong */
+    border-radius: 8px; /* Bo góc */
+    transition: transform 0.3s; /* Hiệu ứng chuyển động */
+}
+
+.team-member img, .partner-item img {
+    width: 100%;
+    height: auto;
+    max-height: 200px; /* Đặt chiều cao tối đa cho hình ảnh */
+    object-fit: cover; /* Đảm bảo hình ảnh bao phủ không gian */
+    margin-bottom: 10px;
+}
+
+.team-member h3, .partner-item h3 {
+    font-size: 1.2rem; /* Cỡ chữ */
+    color: #333; /* Màu chữ đen */
+    margin-bottom: 10px;
+}
+
+.team-member p, .partner-item p {
+    font-size: 1rem; /* Cỡ chữ */
+    color: #666; /* Màu chữ xám nhạt */
+}
+
+.team-member:hover, .partner-item:hover {
+    transform: translateY(-10px); /* Hiệu ứng khi di chuột qua */
+}
+
+/* Footer */
+footer {
+    background-color: #444; /* Màu nền xám đậm */
     color: #fff; /* Màu chữ trắng */
     padding: 20px 0;
+    text-align: center;
+    border-top: 2px solid #333; /* Đường viền trên */
 }
+
+/* Form */
 #contact {
     padding: 50px 0;
 }
@@ -82,184 +175,3 @@ header {
 #contact form button:hover {
     background-color: #0056b3; /* Màu nền xanh dương nhạt khi di chuột */
 }
-./* General Image Styling */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-/* Specific styling for images in various sections if needed */
-#banner img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.category-item img,
-.product-item img,
-.blog-item img {
-    max-width: 200px; /* Adjust as necessary */
-    max-height: 200px; /* Adjust as necessary */
-    width: auto;
-    height: auto;
-    margin: 0 auto;
-}
-
-/* Ensuring consistent box sizing */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-/* General Image Styling */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-/* Specific styling for the banner image */
-.banner-img {
-    width: 100%;
-    height: auto;
-    max-height: 400px; /* Set a maximum height for the banner image */
-    object-fit: cover; /* Ensures the image covers the space */
-}
-
-/* Specific styling for images in various sections if needed */
-.image-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    justify-content: center;
-}
-
-.image-item {
-    flex: 1 1 calc(33.333% - 32px); /* 3 images per row with 16px gap */
-    box-sizing: border-box;
-    margin-bottom: 16px;
-    max-width: calc(33.333% - 32px); /* Ensure each item doesn't exceed a third of the container width */
-}
-
-.image-item img {
-    width: 100%;
-    height: auto;
-    max-height: 400px; /* Set the same max-height for all images */
-    object-fit: cover; /* Ensures the images cover the space */
-}
-
-/* Ensuring consistent box sizing */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-/* Container styling for better centering and padding */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 16px;
-}
-/* General Image Styling */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-/* Specific styling for the banner image */
-.banner-img {
-    width: 100%;
-    height: auto;
-    max-height: 400px; /* Set a maximum height for the banner image */
-    object-fit: cover; /* Ensures the image covers the space */
-}
-
-/* Specific styling for images in various sections if needed */
-.responsive-img {
-    width: 100%;
-    height: auto;
-    object-fit: cover; /* Ensures the images cover the space */
-}
-
-/* Blog Image Styling */
-.blog-img {
-    max-height: 500px; /* Increase the max-height for blog images */
-}
-
-/* Blog list and items */
-.blog-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    justify-content: center;
-}
-
-.blog-item {
-    flex: 1 1 calc(50% - 32px); /* 2 images per row with 16px gap */
-    box-sizing: border-box;
-    margin-bottom: 16px;
-    max-width: calc(50% - 32px); /* Ensure each item doesn't exceed half of the container width */
-}
-
-.blog-item img {
-    width: 100%;
-    height: auto;
-    max-height: 500px; /* Set the same max-height for blog images */
-    object-fit: cover; /* Ensures the images cover the space */
-}
-
-/* Ensuring consistent box sizing */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-/* Container styling for better centering and padding */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 16px;
-}
-
-/* Cân đối kích thước của hình ảnh */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Các phần tử chứa hình ảnh */
-.container {
-    width: 90%; /* hoặc bất kỳ giá trị nào phù hợp với thiết kế của bạn */
-    margin: 0 auto;
-}
-
-#about-us, #mission-vision, #team, #partners {
-    padding: 50px 0; /* hoặc bất kỳ giá trị nào phù hợp */
-}
-
-.team-list, .partner-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.team-member, .partner-item {
-    flex: 0 0 calc(33.33% - 20px); /* hoặc bất kỳ giá trị nào phù hợp */
-    margin: 10px;
-    text-align: center;
-}
-
-.team-member img, .partner-item img {
-    width: 100%;
-    max-width: 100%;
-}
-

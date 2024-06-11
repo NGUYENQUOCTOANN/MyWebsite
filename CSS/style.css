@@ -229,79 +229,57 @@ body {
     background-color: #0056b3; /* Màu nền xanh dương nhạt khi di chuột */
 }
 
-.notification {
-    display: none; /* Ẩn thông báo ban đầu */
-    margin-top: 20px;
-    font-size: 18px;
-    color: green; /* Màu chữ thành công */
-    font-weight: bold;
+/* Basic styles for the cart */
+#cart {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    border-left: 1px solid #ccc;
+    box-shadow: -3px 0 5px rgba(0,0,0,0.2);
+    padding: 20px;
+    display: none;
+    flex-direction: column;
 }
-
-.blog-item {
-    flex: 1 1 calc(50% - 32px); /* 2 images per row with 16px gap */
-    box-sizing: border-box;
-    margin-bottom: 16px;
-    max-width: calc(50% - 32px); /* Ensure each item doesn't exceed half of the container width */
-}
-
-.blog-item img {
-    width: 100%;
-    height: auto;
-    max-height: 500px; /* Set the same max-height for blog images */
-    object-fit: cover; /* Ensures the images cover the space */
-}
-
-/* Ensuring consistent box sizing */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-/* Container styling for better centering and padding */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 16px;
-}
-/* Reset CSS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Cân đối kích thước của hình ảnh */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Các phần tử chứa hình ảnh */
-.container {
-    width: 90%; /* hoặc bất kỳ giá trị nào phù hợp với thiết kế của bạn */
-    margin: 0 auto;
-}
-
-#about-us, #mission-vision, #team, #partners {
-    padding: 50px 0; /* hoặc bất kỳ giá trị nào phù hợp */
-}
-
-.team-list, .partner-list {
+#cart.show {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 }
-
-.team-member, .partner-item {
-    flex: 0 0 calc(33.33% - 20px); /* hoặc bất kỳ giá trị nào phù hợp */
-    margin: 10px;
+#cart h2 {
     text-align: center;
 }
-
-.team-member img, .partner-item img {
-    width: 100%;
-    max-width: 100%;
+#cart-items {
+    flex: 1;
+    overflow-y: auto;
 }
-
+#cart-items .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#cart-items .cart-item img {
+    max-width: 50px;
+    margin-right: 10px;
+}
+#cart-total {
+    text-align: center;
+    margin-top: 20px;
+}
+.add-to-cart {
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.add-to-cart:hover {
+    background-color: #218838;
+}
+.remove-from-cart {
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+}

@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('nen.jpg'); /* Hình ảnh nền */
+    background-image: url('../RES/nen.jpg'); /* Hình ảnh nền */
     background-size: cover; /* Kéo căng hình ảnh nền để nó phù hợp với kích thước trình duyệt */
     background-position: center; /* Canh giữa hình ảnh nền */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow cho toàn bộ body */
@@ -19,7 +19,7 @@ body {
 
 
 header {
-    background: url('nen2.jpeg') no-repeat center center; /* Thêm hình ảnh làm background */
+    background: url('../RES/nen2.jpeg') no-repeat center center; /* Thêm hình ảnh làm background */
     background-size: cover; /* Chỉnh kích thước ảnh để cover toàn bộ header */
     color: rgb(5, 195, 163);
     padding: 20px;

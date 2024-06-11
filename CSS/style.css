@@ -228,58 +228,71 @@ body {
 .btn:hover {
     background-color: #0056b3; /* Màu nền xanh dương nhạt khi di chuột */
 }
-/* Basic styles for the cart */
-#cart {
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 300px;
-    height: 100%;
-    background-color: white;
-    border-left: 1px solid #ccc;
-    box-shadow: -3px 0 5px rgba(0,0,0,0.2);
-    padding: 20px;
-    display: none;
-    flex-direction: column;
-    z-index: 1000; /* Ensure the cart is above other elements */
-}
-#cart.show {
-    display: flex;
-}
-#cart h2 {
-    text-align: center;
-}
-#cart-items {
-    flex: 1;
-    overflow-y: auto;
-}
-#cart-items .cart-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-}
-#cart-items .cart-item img {
-    max-width: 50px;
-    margin-right: 10px;
-}
-#cart-total {
-    text-align: center;
-    margin-top: 20px;
-}
-.add-to-cart {
-    cursor: pointer;
-    padding: 10px 15px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-}
-.add-to-cart:hover {
-    background-color: #218838;
-}
-.remove-from-cart {
-    cursor: pointer;
-    color: red;
-    font-weight: bold;
-}
+<style>
+    /* Add this CSS to style the cart */
+    #cart {
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 100%;
+        max-width: 300px;
+        height: 100%;
+        background-color: white;
+        border-left: 1px solid #ccc;
+        box-shadow: -3px 0 5px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        display: none;
+        flex-direction: column;
+        z-index: 999; /* Ensure it's above other content */
+    }
+
+    #cart h2 {
+        text-align: center;
+    }
+
+    #cart-items {
+        flex: 1;
+        overflow-y: auto;
+    }
+
+    #cart-items .cart-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    #cart-items .cart-item img {
+        max-width: 50px;
+        margin-right: 10px;
+    }
+
+    #cart-total {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #cart-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .cart-button {
+        cursor: pointer;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    .cart-button:hover {
+        background-color: #eee;
+    }
+
+    .remove-from-cart {
+        color: red;
+        font-weight: bold;
+    }
+</style>

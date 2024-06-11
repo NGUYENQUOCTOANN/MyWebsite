@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Học Tập - Cửa Hàng Của Chúng Tôi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Card Học Tập - Cửa Hàng Của Chúng Tôi</h1>
+    </header>
+    <nav>
+        <a href="trangchu.html">Trang Chủ</a>
+        <a href="sanpham.html">Sản Phẩm</a>
+        <a href="gioithieu.html">Giới Thiệu</a>
+        <a href="lienhe.html">Liên Hệ</a>
+    </nav>
+    <div class="container">
+        <h2>Chào mừng đến với Card Học Tập!</h2>
+        <p>Chúng tôi cung cấp các sản phẩm card học tập giúp bạn tổ chức và tối ưu hóa quá trình học tập của mình. Với sự đa dạng trong sản phẩm và chất lượng đảm bảo, chúng tôi cam kết mang lại trải nghiệm học tập hiệu quả và tiện lợi cho bạn.</p>
+        <h3>Tại sao chọn chúng tôi?</h3>
+        <ul>
+            <li><strong>Chất lượng đảm bảo:</strong> Tất cả các sản phẩm đều được làm từ vật liệu chất lượng cao, đảm bảo sự bền bỉ và tiện lợi trong sử dụng.</li>
+            <li><strong>Sự đa dạng:</strong> Chúng tôi cung cấp một loạt các loại card học tập, từ card ghi chú đến card lịch học, đáp ứng mọi nhu cầu và sở thích của bạn.</li>
+            <li><strong>Phục vụ tận tình:</strong> Đội ngũ nhân viên của chúng tôi luôn sẵn lòng hỗ trợ và tư vấn cho bạn về các sản phẩm phù hợp nhất với nhu cầu của bạn.</li>
+        </ul>
+        <p>Hãy khám phá ngay và cùng chúng tôi trang bị cho mình những công cụ học tập tốt nhất!</p>
+    </div>
+
+    <main>
+        <section id="products" class="product-list">
+            <h2>Sản phẩm</h2>
+            <div class="product-card">
+                <img src="thuockedanang.jpg" alt="BỘ THƯỚC KẺ ĐA NĂNG">
+                <h3>BỘ THƯỚC KẺ ĐA NĂNG</h3>
+                <p>10.000đ</p>
+                <button onclick="addToCart('BỘ THƯỚC KẺ ĐA NĂNG', 10000)">Thêm vào giỏ hàng</button>
+            </div>
+            <div class="product-card">
+                <img src="voolyabc.jpg" alt="TẬP VỞ Ô LY ABC">
+                <h3>BỘ THƯỚC KẺ ĐA NĂNG</h3>
+                <p>20.000đ</p>
+                <button onclick="addToCart('TẬP VỞ Ô LY ABC', 350000)">Thêm vào giỏ hàng</button>
+            </div>
+            <div class="product-card">
+                <img src="balodanu.jpg" alt="BALO DA NỮ CAO CẤP">
+                <h3>BALO DA NỮ CAO CẤP</h3>
+                <p>350.000đ</p>
+                <button onclick="addToCart('BALO DA NỮ CAO CẤP', 350000)">Thêm vào giỏ hàng</button>
+            </div>
+            <div class="product-card">
+                <img src="balonamcaocap.jpg" alt="BALO NAM CAO CẤP">
+                <h3>BALO NAM CAO CẤP</h3>
+                <p>430.000đ</p>
+                <button onclick="addToCart('BALO NAM CAO CẤP', 350000)">Thêm vào giỏ hàng</button>
+            </div>
+            <div class="product-card">
+                <img src="casino fx570plus.jpg" alt="MÁY TÍNH FX-570 PLUS">
+                <h3>MÁY TÍNH FX-570 PLUS</h3>
+                <p>600.000đ</p>
+                <button onclick="addToCart('MÁY TÍNH FX-570 PLUS', 350000)">Thêm vào giỏ hàng</button>
+            </div>
+            <div class="product-card">
+                <img src="3loaibut.jpg" alt="COMPO 30 BÚT 3 LOẠI MỰC">
+                <h3>COMPO 30 BÚT 3 LOẠI MỰC</h3>
+                <p>70.000đ</p>
+                <button onclick="addToCart('COMPO 30 BÚT 3 LOẠI MỰC', 350000)">Thêm vào giỏ hàng</button>
+            </div>
+            <!-- Add more product cards similarly -->
+        </section>
+
+        <aside id="cart" class="shopping-cart">
+            <h2>Giỏ hàng</h2>
+            <img src="shopping_cart_image.jpg" alt="Giỏ hàng">
+            <ul id="cart-items"></ul>
+            <p>Total: $<span id="total-price">0.00</span></p>
+            <button onclick="checkout()">Thanh toán</button>
+        </aside>        
+        
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Card Học Tập. Bản quyền được bảo lưu.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

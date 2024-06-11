@@ -1,24 +1,14 @@
-// script.js
-
+// Function to open the cart
 function openCart() {
     document.getElementById('cart').classList.add('show');
 }
 
+// Function to close the cart
 function closeCart() {
     document.getElementById('cart').classList.remove('show');
 }
 
-document.querySelectorAll('.add-to-cart').forEach(button => {
-    button.addEventListener('click', (event) => {
-        const productItem = event.target.closest('.product-item');
-        const name = productItem.getAttribute('data-name');
-        const price = productItem.getAttribute('data-price');
-        const image = productItem.getAttribute('data-image');
-
-        addToCart(name, price, image);
-    });
-});
-
+// Function to add an item to the cart
 function addToCart(name, price, image) {
     const cartItems = document.getElementById('cart-items');
     const cartItem = document.createElement('div');
@@ -34,12 +24,14 @@ function addToCart(name, price, image) {
     updateTotalPrice();
 }
 
+// Function to remove an item from the cart
 function removeFromCart(element) {
     const cartItem = element.closest('.cart-item');
     cartItem.remove();
     updateTotalPrice();
 }
 
+// Function to update the total price
 function updateTotalPrice() {
     const cartItems = document.querySelectorAll('.cart-item');
     let total = 0;
@@ -52,11 +44,22 @@ function updateTotalPrice() {
     document.getElementById('total-price').textContent = total.toLocaleString() + ' VND';
 }
 
+// Function to handle purchase
 function purchase() {
     alert('Cảm ơn bạn đã mua hàng!');
     document.getElementById('cart-items').innerHTML = '';
     updateTotalPrice();
 }
 
-// Add event listener for the "Giỏ hàng" button to open the cart
-document.querySelector('nav ul li button').addEventListener('click', openCart);
+// Add event listeners to "add-to-cart" buttons
+document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', (event) => {
+        const productItem = event.target.closest('.product-item');
+        const name = productItem.getAttribute('data-name');
+        const price = productItem.getAttribute('data-price');
+        const image = productItem.getAttribute('data-image');
+
+        addToCart(name, price, image);
+        openCart();
+    });
+});

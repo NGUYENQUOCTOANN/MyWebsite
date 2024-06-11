@@ -1,224 +1,89 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SportShop - Sản phẩm</title>
-    <link rel="stylesheet" href="../CSS/style.css">
-    <style>
-        /* Basic styles for the cart */
-        #cart {
-            position: fixed;
-            right: 0;
-            top: 0;
-            width: 300px;
-            height: 100%;
-            background-color: white;
-            border-left: 1px solid #ccc;
-            box-shadow: -3px 0 5px rgba(0,0,0,0.2);
-            padding: 20px;
-            display: none;
-            flex-direction: column;
-        }
-        #cart h2 {
-            text-align: center;
-        }
-        #cart-items {
-            flex: 1;
-            overflow-y: auto;
-        }
-        #cart-items .cart-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-        #cart-items .cart-item img {
-            max-width: 50px;
-            margin-right: 10px;
-        }
-        #cart-total {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .add-to-cart {
-            cursor: pointer;
-            padding: 10px 15px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 5px;
-        }
-        .add-to-cart:hover {
-            background-color: #218838;
-        }
-        .remove-from-cart {
-            cursor: pointer;
-            color: red;
-            font-weight: bold;
-        }
-    </style>
+    <title>Card Học Tập - Cửa Hàng Của Chúng Tôi</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
     <header>
-        <div class="container">
-            <h1>SportShop</h1>
-            <nav>
-                <ul>
-                    <li><a href="trangchu.html">Trang chủ</a></li>
-                    <li><a href="sanpham.html">Sản phẩm</a></li>
-                    <li><a href="gioithieu.html">Giới thiệu</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1>Card Học Tập - Cửa Hàng Của Chúng Tôi</h1>
     </header>
-
-    <!-- Products Section -->
-    <section id="all-products">
-        <div class="container">
-            <h2>Tất cả sản phẩm</h2>
-            <div class="product-list">
-                <!-- Product Items -->
-                <div class="product-item" data-name="Giày chạy bộ" data-price="1000000" data-image="../RES/day.jpg">
-                    <img src="../RES/day.jpg" alt="Giày chạy bộ" class="responsive-img">
-                    <h3>Giày chạy bộ</h3>
-                    <p>1,000,000 VND</p>
-                    <button class="add-to-cart">Thêm vào giỏ</button>
-                </div>
-                <div class="product-item" data-name="Áo thể thao" data-price="500000" data-image="../RES/aott.png">
-                    <img src="../RES/aott.png" alt="Áo thể thao" class="responsive-img">
-                    <h3>Áo thể thao</h3>
-                    <p>500,000 VND</p>
-                    <button class="add-to-cart">Thêm vào giỏ</button>
-                </div>
-                <div class="product-item" data-name="Balo thể thao" data-price="750000" data-image="../RES/balo tt.jpg">
-                    <img src="../RES/balo tt.jpg" alt="Balo thể thao" class="responsive-img">
-                    <h3>Balo thể thao</h3>
-                    <p>750,000 VND</p>
-                    <button class="add-to-cart">Thêm vào giỏ</button>
-                </div>
-                <!-- More products here -->
-                <div class="product-item" data-name="Giày đá bóng" data-price="1000000" data-image="../RES/bongda.jpg">
-                    <img src="../RES/bongda.jpg" alt="Giày đá bóng" class="responsive-img">
-                    <h3>Giày bóng đá</h3>
-                    <p>1,000,000 VND</p>
-                    <button class="add-to-cart">Thêm vào giỏ</button>
-                </div>
-                <div class="product-item" data-name="Áo khoác thể thao" data-price="500000" data-image="../RES/aokhoactt.jpg">
-                    <img src="../RES/aokhoactt.jpg" alt="Áo khoác thể thao" class="responsive-img">
-                    <h3>Áo khoác thể thao</h3>
-                    <p>500,000 VND</p>
-                    <button class="add-to-cart">Thêm vào giỏ</button>
-                </div>
-                <div class="product-item" data-name="áo giữ nhiệt" data-price="750000" data-image="../RES/aogiunhiet.webp">
-                    <img src="../RES/aogiunhiet.webp" alt="áo giữ nhiệt" class="responsive-img">
-                    <h3>Áo giữ nhiệt</h3>
-                    <p>750,000 VND</p>
-                    <button class="add-to-cart">Thêm vào giỏ</button>
-                </div>
-                <div class="product-item" data-name="Giày bóng chuyền" data-price="1200000" data-image="../RES/bongchuyen.webp">
-                    <img src="../RES/bongchuyen.webp" alt="Giày bóng chuyền" class="responsive-img">
-                    <h3>Giày bóng chuyền</h3>
-                    <p>1,200,000 VND</p>
-                    <button class="add-to-cart">Thêm vào giỏ</button>
-                </div>
-                <div class="product-item" data-name="Quần thể thao" data-price="400000" data-image="../RES/quantt.jpg">
-                    <img src="../RES/quantt.jpg" alt="Quần thể thao" class="responsive-img">
-                    <h3>Quần thể thao</h3>
-                    <p>400,000 VND</p>
-                    <button class="add-to-cart">Thêm vào giỏ</button>
-                </div>
-                <div class="product-item" data-name="Balo tập gym" data-price="800000" data-image="../RES/balogym.webp">
-                    <img src="../RES/balogym.webp" alt="Balo tập gym" class="responsive-img">
-                    <h3>Balo tập gym</h3>
-                    <p>800,000 VND</p>
-                    <button class="add-to-cart">Thêm vào giỏ</button>
-                </div>
-                <div class="product-item" data-name="Nón thể thao" data-price="300000" data-image="../RES/nontt.jpg">
-                    <img src="../RES/nontt.jpg" alt="Nón thể thao" class="responsive-img">
-                    <h3>Nón thể thao</h3>
-                    <p>300,000 VND</p>
-                    <button class="add-to-cart">Thêm vào giỏ</button>
-                </div>
-                <div class="product-item" data-name="Tất thể thao" data-price="100000" data-image="../RES/tat.webp">
-                    <img src="../RES/tat.webp" alt="Tất thể thao" class="responsive-img">
-                    <h3>Tất thể thao</h3>
-                    <p>100,000 VND</p>
-                    <button class="add-to-cart">Thêm vào giỏ</button>
-                </div>
-                <div class="product-item" data-name="Găng tay tập gym" data-price="200000" data-image="../RES/gangtay.jpg">
-                    <img src="../RES/gangtay.jpg" alt="Găng tay tập gym" class="responsive-img">
-                    <h3>Găng tay tập gym</h3>
-                    <p>200,000 VND</p>
-                    <button class="add-to-cart">Thêm vào giỏ</button>
-                </div>
-                <div class="product-item" data-name="Bình nước thể thao" data-price="150000" data-image="../RES/binhnuoc.jpg">
-                    <img src="../RES/binhnuoc.jpg" alt="Bình nước thể thao" class="responsive-img">
-                    <h3>Bình nước thể thao</h3>
-                    <p>150,000 VND</p>
-                    <button class="add-to-cart">Thêm vào giỏ</button>
-                </div>
-                <div class="product-item" data-name="Dụng cụ tập yoga" data-price="500000" data-image="../RES/yoga.jpg">
-                    <img src="../RES/yoga.jpg" alt="Dụng cụ tập yoga" class="responsive-img">
-                    <h3>Dụng cụ tập yoga</h3>
-                    <p>500,000 VND</p>
-                    <button class="add-to-cart">Thêm vào giỏ</button>
-                </div>
-                <div class="product-item" data-name="Thảm tập gym" data-price="350000" data-image="../RES/thamgym.jpeg">
-                    <img src="../RES/thamgym.jpeg" alt="Thảm tập gym" class="responsive-img">
-                    <h3>Thảm tập gym</h3>
-                    <p>350,000 VND</p>
-                    <button class="add-to-cart">Thêm vào giỏ</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Cart Section -->
-    <div id="cart">
-        <h2>Giỏ hàng</h2>
-        <div id="cart-items"></div>
-        <div id="cart-total">
-            <p>Tổng cộng: <span id="total-price">0 VND</span></p>
-        </div>
-        <button onclick="purchase()" id="purchase-button">Mua hàng</button>
-        <button onclick="closeCart()">Đóng</button>
+    <nav>
+        <a href="trangchu.html">Trang Chủ</a>
+        <a href="sanpham.html">Sản Phẩm</a>
+        <a href="gioithieu.html">Giới Thiệu</a>
+        <a href="lienhe.html">Liên Hệ</a>
+    </nav>
+    <div class="container">
+        <h2>Chào mừng đến với Card Học Tập!</h2>
+        <p>Chúng tôi cung cấp các sản phẩm card học tập giúp bạn tổ chức và tối ưu hóa quá trình học tập của mình. Với sự đa dạng trong sản phẩm và chất lượng đảm bảo, chúng tôi cam kết mang lại trải nghiệm học tập hiệu quả và tiện lợi cho bạn.</p>
+        <h3>Tại sao chọn chúng tôi?</h3>
+        <ul>
+            <li><strong>Chất lượng đảm bảo:</strong> Tất cả các sản phẩm đều được làm từ vật liệu chất lượng cao, đảm bảo sự bền bỉ và tiện lợi trong sử dụng.</li>
+            <li><strong>Sự đa dạng:</strong> Chúng tôi cung cấp một loạt các loại card học tập, từ card ghi chú đến card lịch học, đáp ứng mọi nhu cầu và sở thích của bạn.</li>
+            <li><strong>Phục vụ tận tình:</strong> Đội ngũ nhân viên của chúng tôi luôn sẵn lòng hỗ trợ và tư vấn cho bạn về các sản phẩm phù hợp nhất với nhu cầu của bạn.</li>
+        </ul>
+        <p>Hãy khám phá ngay và cùng chúng tôi trang bị cho mình những công cụ học tập tốt nhất!</p>
     </div>
 
-    <!-- Footer Section -->
+    <main>
+        <section id="products" class="product-list">
+            <h2>Sản phẩm</h2>
+            <div class="product-card">
+                <img src="thuockedanang.jpg" alt="BỘ THƯỚC KẺ ĐA NĂNG">
+                <h3>BỘ THƯỚC KẺ ĐA NĂNG</h3>
+                <p>10.000đ</p>
+                <button onclick="addToCart('BỘ THƯỚC KẺ ĐA NĂNG', 10000)">Thêm vào giỏ hàng</button>
+            </div>
+            <div class="product-card">
+                <img src="voolyabc.jpg" alt="TẬP VỞ Ô LY ABC">
+                <h3>BỘ THƯỚC KẺ ĐA NĂNG</h3>
+                <p>20.000đ</p>
+                <button onclick="addToCart('TẬP VỞ Ô LY ABC', 350000)">Thêm vào giỏ hàng</button>
+            </div>
+            <div class="product-card">
+                <img src="balodanu.jpg" alt="BALO DA NỮ CAO CẤP">
+                <h3>BALO DA NỮ CAO CẤP</h3>
+                <p>350.000đ</p>
+                <button onclick="addToCart('BALO DA NỮ CAO CẤP', 350000)">Thêm vào giỏ hàng</button>
+            </div>
+            <div class="product-card">
+                <img src="balonamcaocap.jpg" alt="BALO NAM CAO CẤP">
+                <h3>BALO NAM CAO CẤP</h3>
+                <p>430.000đ</p>
+                <button onclick="addToCart('BALO NAM CAO CẤP', 350000)">Thêm vào giỏ hàng</button>
+            </div>
+            <div class="product-card">
+                <img src="casino fx570plus.jpg" alt="MÁY TÍNH FX-570 PLUS">
+                <h3>MÁY TÍNH FX-570 PLUS</h3>
+                <p>600.000đ</p>
+                <button onclick="addToCart('MÁY TÍNH FX-570 PLUS', 350000)">Thêm vào giỏ hàng</button>
+            </div>
+            <div class="product-card">
+                <img src="3loaibut.jpg" alt="COMPO 30 BÚT 3 LOẠI MỰC">
+                <h3>COMPO 30 BÚT 3 LOẠI MỰC</h3>
+                <p>70.000đ</p>
+                <button onclick="addToCart('COMPO 30 BÚT 3 LOẠI MỰC', 350000)">Thêm vào giỏ hàng</button>
+            </div>
+            <!-- Add more product cards similarly -->
+        </section>
+
+        <aside id="cart" class="shopping-cart">
+            <h2>Giỏ hàng</h2>
+            <img src="shopping_cart_image.jpg" alt="Giỏ hàng">
+            <ul id="cart-items"></ul>
+            <p>Total: $<span id="total-price">0.00</span></p>
+            <button onclick="checkout()">Thanh toán</button>
+        </aside>        
+        
+    </main>
+    
     <footer>
-        <div class="container">
-            <div class="footer-info">
-                <div class="footer-column">
-                    <h3>Về chúng tôi</h3>
-                    <p>SportShop là nơi cung cấp các sản phẩm thể thao chất lượng cao, giúp bạn nâng cao hiệu suất và phong cách.</p>
-                </div>
-                <div class="footer-column">
-                    <h3>Liên hệ</h3>
-                    <ul>
-                        <li>Địa chỉ: 123 Đường ABC, Quận 1, TP.HCM</li>
-                        <li>Email: info@sportshop.com</li>
-                        <li>Điện thoại: 0123 456 789</li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Theo dõi chúng tôi</h3>
-                    <ul class="social-media">
-                        <li><a href="#"><img src="facebook-icon.png" alt="Facebook"></a></li>
-                        <li><a href="#"><img src="instagram-icon.png" alt="Instagram"></a></li>
-                        <li><a href="#"><img src="twitter-icon.png" alt="Twitter"></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 SportShop. All rights reserved.</p>
-            </div>
-        </div>
+        <p>&copy; 2024 Card Học Tập. Bản quyền được bảo lưu.</p>
     </footer>
 
-    <!-- Link to external JavaScript file -->
-<script src="cart.js"><../JS/script>
+    <script src="script.js"></script>
 </body>
 </html>

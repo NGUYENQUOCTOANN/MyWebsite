@@ -228,7 +228,6 @@ body {
 .btn:hover {
     background-color: #0056b3; /* Màu nền xanh dương nhạt khi di chuột */
 }
-
 /* Basic styles for the cart */
 #cart {
     position: fixed;
@@ -242,6 +241,7 @@ body {
     padding: 20px;
     display: none;
     flex-direction: column;
+    z-index: 1000; /* Ensure the cart is above other elements */
 }
 #cart.show {
     display: flex;

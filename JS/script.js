@@ -1,65 +1,45 @@
-// Function to open the cart
-function openCart() {
-    document.getElementById('cart').classList.add('show');
-}
+<script>
+    // Add this JavaScript to handle cart functionality
+    function addToCart(name, price) {
+        var cartItem = `
+            <div class="cart-item">
+                <img src="../RES/${name}.jpg" alt="${name}" class="responsive-img">
+                <div>
+                    <p>${name}</p>
+                    <p>${price} VND</p>
+                </div>
+                <button class="remove-from-cart" onclick="removeFromCart(this)">X</button>
+            </div>`;
+        document.getElementById('cart-items').insertAdjacentHTML('beforeend', cartItem);
 
-// Function to close the cart
-function closeCart() {
-    document.getElementById('cart').classList.remove('show');
-}
+        updateTotal();
+        document.getElementById('cart').style.display = 'block';
+    }
 
-// Function to add an item to the cart
-function addToCart(name, price, image) {
-    const cartItems = document.getElementById('cart-items');
-    const cartItem = document.createElement('div');
-    cartItem.classList.add('cart-item');
-    cartItem.innerHTML = `
-        <img src="${image}" alt="${name}">
-        <span>${name}</span>
-        <span>${price} VND</span>
-        <span class="remove-from-cart" onclick="removeFromCart(this)">X</span>
-    `;
-    cartItems.appendChild(cartItem);
+    function removeFromCart(button) {
+        button.parentNode.remove();
+        updateTotal();
+    }
 
-    updateTotalPrice();
-}
+    function updateTotal() {
+        var totalPrice = 0;
+        var cartItems = document.querySelectorAll('.cart-item');
+        cartItems.forEach(function (item) {
+            var priceString = item.querySelector('p:nth-child(2)').textContent;
+            var price = parseInt(priceString.replace(/\D/g, ''));
+            totalPrice += price;
+        });
+        document.getElementById('total-price').textContent = totalPrice.toLocaleString() + ' VND';
+    }
 
-// Function to remove an item from the cart
-function removeFromCart(element) {
-    const cartItem = element.closest('.cart-item');
-    cartItem.remove();
-    updateTotalPrice();
-}
+    function purchase() {
+        alert('Đã mua hàng thành công!');
+        document.getElementById('cart-items').innerHTML = '';
+        updateTotal();
+        document.getElementById('cart').style.display = 'none';
+    }
 
-// Function to update the total price
-function updateTotalPrice() {
-    const cartItems = document.querySelectorAll('.cart-item');
-    let total = 0;
-
-    cartItems.forEach(item => {
-        const price = parseInt(item.children[2].textContent.replace(' VND', '').replace(/,/g, ''));
-        total += price;
-    });
-
-    document.getElementById('total-price').textContent = total.toLocaleString() + ' VND';
-}
-
-// Function to handle purchase
-function purchase() {
-    alert('Cảm ơn bạn đã mua hàng!');
-    document.getElementById('cart-items').innerHTML = '';
-    updateTotalPrice();
-}
-
-// Add event listeners to "add-to-cart" buttons
-document.querySelectorAll('.add-to-cart').forEach(button => {
-    button.addEventListener('click', (event) => {
-        const productItem = event.target.closest('.product-item');
-        const name = productItem.getAttribute('data-name');
-        const price = productItem.getAttribute('data-price');
-        const image = productItem.getAttribute('data-image');
-
-        addToCart(name, price, image);
-        openCart();
-    });
-});
+    function closeCart() {
+        document.getElementById('cart').style.display = 'none';
+    }
+</script>

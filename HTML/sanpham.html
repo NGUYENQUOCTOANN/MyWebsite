@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,36 +12,43 @@
             position: fixed;
             right: 0;
             top: 0;
-            width: 300px;
+            width: 100%;
+            max-width: 300px;
             height: 100%;
             background-color: white;
             border-left: 1px solid #ccc;
-            box-shadow: -3px 0 5px rgba(0,0,0,0.2);
+            box-shadow: -3px 0 5px rgba(0, 0, 0, 0.2);
             padding: 20px;
             display: none;
             flex-direction: column;
         }
+
         #cart h2 {
             text-align: center;
         }
+
         #cart-items {
             flex: 1;
             overflow-y: auto;
         }
+
         #cart-items .cart-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 10px;
         }
+
         #cart-items .cart-item img {
             max-width: 50px;
             margin-right: 10px;
         }
+
         #cart-total {
             text-align: center;
             margin-top: 20px;
         }
+
         .add-to-cart {
             cursor: pointer;
             padding: 10px 15px;
@@ -50,16 +57,27 @@
             border: none;
             border-radius: 5px;
         }
+
         .add-to-cart:hover {
             background-color: #218838;
         }
+
         .remove-from-cart {
             cursor: pointer;
             color: red;
             font-weight: bold;
         }
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 768px) {
+            #cart {
+                width: 100%;
+                max-width: none;
+            }
+        }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header>
@@ -87,91 +105,7 @@
                     <p>1,000,000 VND</p>
                     <button class="add-to-cart">Thêm vào giỏ</button>
                 </div>
-                <div class="product-item" data-name="Áo thể thao" data-price="500000" data-image="../RES/aott.png">
-                    <img src="../RES/aott.png" alt="Áo thể thao" class="responsive-img">
-                    <h3>Áo thể thao</h3>
-                    <p>500,000 VND</p>
-                    <button class="add-to-cart">Thêm vào giỏ</button>
-                </div>
-                <div class="product-item" data-name="Balo thể thao" data-price="750000" data-image="../RES/balo tt.jpg">
-                    <img src="../RES/balo tt.jpg" alt="Balo thể thao" class="responsive-img">
-                    <h3>Balo thể thao</h3>
-                    <p>750,000 VND</p>
-                    <button class="add-to-cart">Thêm vào giỏ</button>
-                </div>
                 <!-- More products here -->
-                <div class="product-item" data-name="Giày đá bóng" data-price="1000000" data-image="../RES/bongda.jpg">
-                    <img src="../RES/bongda.jpg" alt="Giày đá bóng" class="responsive-img">
-                    <h3>Giày bóng đá</h3>
-                    <p>1,000,000 VND</p>
-                    <button class="add-to-cart">Thêm vào giỏ</button>
-                </div>
-                <div class="product-item" data-name="Áo khoác thể thao" data-price="500000" data-image="../RES/aokhoactt.jpg">
-                    <img src="../RES/aokhoactt.jpg" alt="Áo khoác thể thao" class="responsive-img">
-                    <h3>Áo khoác thể thao</h3>
-                    <p>500,000 VND</p>
-                    <button class="add-to-cart">Thêm vào giỏ</button>
-                </div>
-                <div class="product-item" data-name="áo giữ nhiệt" data-price="750000" data-image="../RES/aogiunhiet.webp">
-                    <img src="../RES/aogiunhiet.webp" alt="áo giữ nhiệt" class="responsive-img">
-                    <h3>Áo giữ nhiệt</h3>
-                    <p>750,000 VND</p>
-                    <button class="add-to-cart">Thêm vào giỏ</button>
-                </div>
-                <div class="product-item" data-name="Giày bóng chuyền" data-price="1200000" data-image="../RES/bongchuyen.webp">
-                    <img src="../RES/bongchuyen.webp" alt="Giày bóng chuyền" class="responsive-img">
-                    <h3>Giày bóng chuyền</h3>
-                    <p>1,200,000 VND</p>
-                    <button class="add-to-cart">Thêm vào giỏ</button>
-                </div>
-                <div class="product-item" data-name="Quần thể thao" data-price="400000" data-image="../RES/quantt.jpg">
-                    <img src="../RES/quantt.jpg" alt="Quần thể thao" class="responsive-img">
-                    <h3>Quần thể thao</h3>
-                    <p>400,000 VND</p>
-                    <button class="add-to-cart">Thêm vào giỏ</button>
-                </div>
-                <div class="product-item" data-name="Balo tập gym" data-price="800000" data-image="../RES/balogym.webp">
-                    <img src="../RES/balogym.webp" alt="Balo tập gym" class="responsive-img">
-                    <h3>Balo tập gym</h3>
-                    <p>800,000 VND</p>
-                    <button class="add-to-cart">Thêm vào giỏ</button>
-                </div>
-                <div class="product-item" data-name="Nón thể thao" data-price="300000" data-image="../RES/nontt.jpg">
-                    <img src="../RES/nontt.jpg" alt="Nón thể thao" class="responsive-img">
-                    <h3>Nón thể thao</h3>
-                    <p>300,000 VND</p>
-                    <button class="add-to-cart">Thêm vào giỏ</button>
-                </div>
-                <div class="product-item" data-name="Tất thể thao" data-price="100000" data-image="../RES/tat.webp">
-                    <img src="../RES/tat.webp" alt="Tất thể thao" class="responsive-img">
-                    <h3>Tất thể thao</h3>
-                    <p>100,000 VND</p>
-                    <button class="add-to-cart">Thêm vào giỏ</button>
-                </div>
-                <div class="product-item" data-name="Găng tay tập gym" data-price="200000" data-image="../RES/gangtay.jpg">
-                    <img src="../RES/gangtay.jpg" alt="Găng tay tập gym" class="responsive-img">
-                    <h3>Găng tay tập gym</h3>
-                    <p>200,000 VND</p>
-                    <button class="add-to-cart">Thêm vào giỏ</button>
-                </div>
-                <div class="product-item" data-name="Bình nước thể thao" data-price="150000" data-image="../RES/binhnuoc.jpg">
-                    <img src="../RES/binhnuoc.jpg" alt="Bình nước thể thao" class="responsive-img">
-                    <h3>Bình nước thể thao</h3>
-                    <p>150,000 VND</p>
-                    <button class="add-to-cart">Thêm vào giỏ</button>
-                </div>
-                <div class="product-item" data-name="Dụng cụ tập yoga" data-price="500000" data-image="../RES/yoga.jpg">
-                    <img src="../RES/yoga.jpg" alt="Dụng cụ tập yoga" class="responsive-img">
-                    <h3>Dụng cụ tập yoga</h3>
-                    <p>500,000 VND</p>
-                    <button class="add-to-cart">Thêm vào giỏ</button>
-                </div>
-                <div class="product-item" data-name="Thảm tập gym" data-price="350000" data-image="../RES/thamgym.jpeg">
-                    <img src="../RES/thamgym.jpeg" alt="Thảm tập gym" class="responsive-img">
-                    <h3>Thảm tập gym</h3>
-                    <p>350,000 VND</p>
-                    <button class="add-to-cart">Thêm vào giỏ</button>
-                </div>
             </div>
         </div>
     </section>
@@ -193,7 +127,8 @@
             <div class="footer-info">
                 <div class="footer-column">
                     <h3>Về chúng tôi</h3>
-                    <p>SportShop là nơi cung cấp các sản phẩm thể thao chất lượng cao, giúp bạn nâng cao hiệu suất và phong cách.</p>
+                    <p>SportShop là nơi cung cấp các sản phẩm thể thao chất lượng cao, giúp bạn nâng cao hiệu suất và
+                        phong cách.</p>
                 </div>
                 <div class="footer-column">
                     <h3>Liên hệ</h3>
@@ -221,5 +156,5 @@
     <!-- Link to external JavaScript file -->
     <script src="script.js"></script>
 </body>
-</html>
 
+</html>
